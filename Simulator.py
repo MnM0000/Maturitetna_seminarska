@@ -25,11 +25,6 @@ planetarni_podatki = {'masa': [0.330, 4.87, 5.97, 0.642, 1898, 568, 86.8, 102, 0
                       'razdalja': [57.9, 108.2, 149.6, 228.0, 778.5, 1432.0, 2867.0, 4515.0, 5906.4],
                       'hitrost': [47.4, 35.0, 29.8, 24.1, 13.1, 9.7, 6.8, 5.4, 4.7]
                       }
-podatki_lun = {'masa': [0.073],
-               'premer': [3475],
-               'razdalja': [0.384],
-               'hitrost': [1.0]
-               }
 screen = pg.display.set_mode(size)
 x = 0
 zoom = 10**8
@@ -111,7 +106,7 @@ def rad_draw(pl1, czoom):
 planets = []
 Sun = planet(1.988500*(10**30), width/2, height/2, 0, 0, yellow, 1)
 if mode == 1:
-    SPD = (1/FPS)*60*60*24
+    SPD = 10*(1/FPS)*60*60*24
     Earth = planet(5.97*mass_mult, width/2, height/2 + 147.1, 30.29*10**3*SPD/SCALE, 0, blue, 1/5)
     planets = [Sun, Earth]
 elif mode == 0:
